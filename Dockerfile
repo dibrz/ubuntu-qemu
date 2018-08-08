@@ -1,2 +1,2 @@
-FROM arm32v6/alpine:3.6
+FROM arm64v8/ubuntu:18.04
 COPY tmp/qemu-arm-static /usr/bin/qemu-arm-static
