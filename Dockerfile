@@ -1,4 +1,8 @@
-FROM arm64v8/ubuntu:18.04
-# COPY tmp/qemu-arm-static /usr/bin/qemu-arm-static
+FROM arm64v8/ubuntu:bionic
 COPY ./sources.list /etc/apt/
+
 COPY tmp/qemu-aarch64-static /usr/bin/qemu-aarch64-static
+
+# install packages
+RUN apt-get update && \
+    apt-get upgrade
